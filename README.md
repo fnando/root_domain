@@ -1,7 +1,7 @@
 # root_domain
 
 If you ever worked with domain validation, you probably needed to extract the
-root domain. This means that, given some hostname, remove subdomains from the original input, taking into account not only official Internet [TLDs](https://en.wikipedia.org/wiki/Top-level_domain), but. [SLDs](https://en.wikipedia.org/wiki/Second-level_domain) too.
+root domain. This means that, given some hostname, you must remove subdomains from the original input, taking into account not only official Internet [TLDs](https://en.wikipedia.org/wiki/Top-level_domain), but [SLDs](https://en.wikipedia.org/wiki/Second-level_domain) too.
 
 With root_domain, you can easily extract the root domain, expanding any input from punycode into ASCII entries.
 
