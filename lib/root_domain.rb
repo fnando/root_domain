@@ -1,5 +1,6 @@
 # frozen_string_literal: true
 
+require "email_data"
 require "simpleidn"
 require "json"
 
@@ -9,7 +10,7 @@ module RootDomain
   def self.call(input)
     input = SimpleIDN.to_ascii(input)
 
-    find(slds, input) || find(tlds, input)
+    find(EmailData.slds, input) || find(EmailData.tlds, input)
   end
 
   def self.find(source, input)
@@ -22,13 +23,5 @@ module RootDomain
     end
 
     nil
-  end
-
-  def self.slds
-    @slds ||= JSON.parse(File.read("#{__dir__}/../data/slds.json"))
-  end
-
-  def self.tlds
-    @tlds ||= JSON.parse(File.read("#{__dir__}/../data/tlds.json"))
   end
 end
