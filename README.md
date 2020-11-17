@@ -1,25 +1,30 @@
 # root_domain
 
-If you ever worked with domain validation, you probably needed to extract the
-root domain. This means that, given some hostname, you must remove subdomains from the original input, taking into account not only official Internet [TLDs](https://en.wikipedia.org/wiki/Top-level_domain), but [SLDs](https://en.wikipedia.org/wiki/Second-level_domain) too.
+[![Tests](https://github.com/fnando/root_domain/workflows/ruby-tests/badge.svg)](https://github.com/fnando/root_domain)
+[![Code Climate](https://codeclimate.com/github/fnando/root_domain/badges/gpa.svg)](https://codeclimate.com/github/fnando/root_domain)
+[![Gem](https://img.shields.io/gem/v/root_domain.svg)](https://rubygems.org/gems/root_domain)
+[![Gem](https://img.shields.io/gem/dt/root_domain.svg)](https://rubygems.org/gems/root_domain)
 
-With root_domain, you can easily extract the root domain, expanding any input from punycode into ASCII entries.
+If you ever worked with domain validation, you probably needed to extract the
+root domain. This means that, given some hostname, you must remove subdomains
+from the original input, taking into account not only official Internet
+[TLDs](https://en.wikipedia.org/wiki/Top-level_domain), but
+[SLDs](https://en.wikipedia.org/wiki/Second-level_domain) too.
+
+With root_domain, you can easily extract the root domain, expanding any input
+from punycode into ASCII entries.
 
 ## Installation
 
-Add this line to your application's Gemfile:
+```bash
+gem install root_domain
+```
+
+Or add the following line to your project's Gemfile:
 
 ```ruby
 gem "root_domain"
 ```
-
-And then execute:
-
-    $ bundle install
-
-Or install it yourself as:
-
-    $ gem install root_domain
 
 ## Usage
 
@@ -36,24 +41,27 @@ RootDomain.call("myapp.apps.🤯.com")
 #=> xn--oq9h.com
 ```
 
-## Changelog
+## Maintainer
 
-The changelog file is available at [CHANGELOG.md](https://github.com/fnando/root_domain/tree/main/CHANGELOG.md)
+- [Nando Vieira](https://github.com/fnando)
 
-## Development
+## Contributors
 
-After checking out the repo, run `bin/setup` to install dependencies. Then, run `rake test` to run the tests. You can also run `bin/console` for an interactive prompt that will allow you to experiment.
-
-To install this gem onto your local machine, run `bundle exec rake install`. To release a new version, update the version number in `version.rb`, and then run `bundle exec rake release`, which will create a git tag for the version, push git commits and tags, and push the `.gem` file to [rubygems.org](https://rubygems.org).
+- https://github.com/fnando/root_domain/contributors
 
 ## Contributing
 
-Bug reports and pull requests are welcome on GitHub at https://github.com/fnando/root_domain. This project is intended to be a safe, welcoming space for collaboration, and contributors are expected to adhere to the [code of conduct](https://github.com/fnando/root_domain/blob/master/CODE_OF_CONDUCT.md).
+For more details about how to contribute, please read
+https://github.com/fnando/root_domain/blob/main/CONTRIBUTING.md.
 
 ## License
 
-The gem is available as open source under the terms of the [MIT License](https://opensource.org/licenses/MIT).
+The gem is available as open source under the terms of the
+[MIT License](https://opensource.org/licenses/MIT). A copy of the license can be
+found at https://github.com/fnando/root_domain/blob/main/LICENSE.md.
 
 ## Code of Conduct
 
-Everyone interacting in the RootDomain project's codebases, issue trackers, chat rooms and mailing lists is expected to follow the [code of conduct](https://github.com/fnando/root_domain/blob/master/CODE_OF_CONDUCT.md).
+Everyone interacting in the root_domain project's codebases, issue trackers,
+chat rooms and mailing lists is expected to follow the
+[code of conduct](https://github.com/fnando/root_domain/blob/main/CODE_OF_CONDUCT.md).
