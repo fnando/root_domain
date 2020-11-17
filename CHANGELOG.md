@@ -11,7 +11,7 @@ Prefix your message with one of the following:
 - [Security] in case of vulnerabilities.
 -->
 
-## Unreleased
+## v0.1.2 - 2020-11-17
 
 - [Changed] Require ruby-2.6 or newer.
 
